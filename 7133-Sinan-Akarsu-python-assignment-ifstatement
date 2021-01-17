@@ -1,0 +1,11 @@
+
+
+Assignment - 007/1 (if-Statement) 
+
+sub_name = "Joseph"
+user = input("Please enter your name : ")
+if user == sub_name:
+    print("Hello", user,"! The password is : W@12")
+else:
+    print("Hello", user,"! See you later.")
+
