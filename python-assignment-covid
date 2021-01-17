@@ -1,0 +1,39 @@
+age = input("Are you a cigarette addict older than 75?Answer 'yes' or 'No' please :  ").strip().title()
+
+while age != ("Yes" or "No"):
+    print(input("please enter yes or no :"))
+    break
+
+if age == "Yes":
+   age = bool(age) 
+elif age == "No":
+    age = not bool(age)
+    
+
+chronic = input("Do you have a chronical disease? Answer 'Yes' or 'No' please : ").strip().title()
+while chronic != ("Yes" or "No"):
+    print(input("please enter yes or no :"))
+    break
+if chronic == "Yes":
+    chronic = bool(chronic) 
+elif chronic == "No":
+    chronic = not bool(chronic) 
+
+  
+    
+immune = input("İs your immune system too weak? Answer 'Yes' or 'No' please : ").strip().title()
+while immune != ("Yes" or "No"):
+    print(input("please enter yes or no :"))
+    break
+if immune == "Yes":
+    immune = bool(immune) 
+elif immune == "No":
+    immune = not bool(immune) 
+
+    
+
+if age or chronic or immune == True:
+    print("You are in risky group")
+    
+else:
+    print("you are not in risky group")
