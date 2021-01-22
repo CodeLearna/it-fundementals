@@ -1,0 +1,18 @@
+number = input("Please input a positive number : ")
+if number.isdigit() == False:
+    print(input("Please enter only positive integer numbers : "))
+elif int(number) < 0:
+    print(input("Please enter only positive integer numbers : "))
+elif type(number) == float:
+    print(input("Please enter only positive integer numbers : "))
+number = int(number)
+array = [int(i) for i in str(number)]
+power = len(array)
+power_array = []
+for x in array:
+    power_array.append(x**power)
+if sum(power_array) == number:
+    print("This is an ArmstrongNumber! ")
+else:
+    print("This is not an ArmstrongNumber! ")
+
