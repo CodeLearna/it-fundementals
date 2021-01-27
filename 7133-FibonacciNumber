@@ -1,0 +1,26 @@
+
+
+#FİBONACCİ NUMBERS
+
+
+def fibonacci(nterm):
+
+    n1,n2 = 0,1
+    count = 0
+
+    if nterm<=0:
+        print(int(input("Please enter a positive number : ")))
+    elif nterm == 1:
+     print(1)
+    else:
+    
+        while count<nterm:
+            nth=n1+n2
+            n1=n2
+            n2=nth
+            count += 1
+            print(n1)
+        
+        
+fibonacci(10)
+
