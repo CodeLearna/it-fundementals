@@ -4,3 +4,15 @@ def fruiterer(*fruit) :
         print('-', i, end="")
         
 fruiterer('orange', 'banana', 'melon', 'ananas')
+
+
+2. çözüm
+
+
+def animals(**species):
+    for key, value in species.items():
+        print(value, "are", key, end=" and ")
+ 
+animals(Carnivores="Lions", Omnivores="Bears", Herbivores="Deers", Nomnivores="Human")
+
+output: Lions are Carnivores and Bears are Omnivores and Deers are Herbivores and Human are Nomnivores and
