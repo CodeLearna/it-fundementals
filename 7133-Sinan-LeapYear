@@ -1,0 +1,20 @@
+"""
+a = input("Please enter a number : ")
+while  a.isdigit():
+    
+    if int(a) % 400 == 0:
+        print(a,"is a leap year.")
+        break
+    
+    elif int(a) % 100 == 0:
+        print(a,"is not a leap year.")
+        break
+    
+    elif int(a) % 4 == 0:
+        print(a,"is  a leap year.")
+        break
+    
+    else:
+        print(a,"is not a leap year.")
+        break
+"""
