@@ -1,0 +1,5 @@
+a = input("Please enter a sentence : ")
+b = list(sorted(set(a)))
+c = [a.count(i) for i in b]
+dicto = dict(zip(b,c))
+print(dicto)
