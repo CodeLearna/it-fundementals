@@ -1,0 +1,44 @@
+select * from tracks where Milliseconds > (select avg(Milliseconds) from tracks)
+
+select CustomerId,FirstName, LastName from customers where SupportRepId in (select EmployeeId from employees where LastName in ("Peacock","Park"))
+
+
+select customers.CustomerId,customers.LastName,customers.FirstName,employees.FirstName,employees.LastName from customers join employees on customers.SupportRepId = employees.EmployeeId where employees.LastName in ("Peacock", "Park")
+
+
+CREATE TABLE "courses" (
+Courseİd INTEGER UNIQUE PRIMARY KEY ,
+CoursName TEXT UNIQUE,
+CoursePrice REAL
+);
+CREATE TABLE "courseRegistration" (
+Registrationİd INTEGER PRIMARY KEY UNIQUE,
+Courseİd INTEGER NOT NULL UNIQUE FOREIGN KEY,
+Employeeİd INTEGER NOT NULL UNIQUE FOREIGN KEY,
+StartDate TEXT DEFAULT,
+EndDate TEXT DEFAULT,
+Score INTEGER);
+
+INSERT INTO courses (Courseİd,CoursName,CoursePrice)
+VALUES ( 1, "HTML",  33.50),
+		(2, "Python", 44.55),
+		(3, "AGİLE", 25.50),
+		(4, "CSS", 26.45),
+		(5, "DevOps", 25.56);
+
+INSERT INTO "courseRegistration" ( Registrationİd, Courseİd, EmployeeId, StartDate, EndDate, Score)
+VALUES (100, 1, 123, NULL, NULL, NULL),
+		(101, 5, 142, NULL, NULL, 89 ),
+		(102, 4, 524, NULL, NULL, 95),
+		(103, 2, 232, NULL, NULL, NULL),
+		( 104, 3, 343, NULL, NULL, 97);
+
+DELETE FROM courseRegistration where Registrationİd = 104
+
+UPDATE courseRegistration SET StartDate = "2021-1-2" WHERE Registrationİd = 100
+ select * from courseRegistration 
+ 
+UPDATE courseRegistration SET EndDate = "2021-7-2", Score=88 WHERE Registrationİd=100
+UPDATE courseRegistration SET EndDate = "2021-7-13", Score=79 WHERE Registrationİd=101
+
+ALTER TABLE courseRegistration ADD COLUMN "PassScore" İNTEGER;
